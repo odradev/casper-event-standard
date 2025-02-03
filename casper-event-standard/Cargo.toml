@@ -17,7 +17,7 @@ casper-event-standard-macro = { version = "0.5.0", path = "../casper-event-stand
 serde = { version = "1.0", features = ["derive"], optional = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-casper-contract = { git = "https://github.com/casper-network/casper-node.git", branch = "release-2.0.0-rc6", default-features = false }
+casper-contract = { git = "https://github.com/casper-network/casper-node.git", branch = "feat-2.0", default-features = false }
 
 [package.metadata.docs.rs]
 default-target = "wasm32-unknown-unknown"
@@ -25,5 +25,3 @@ default-target = "wasm32-unknown-unknown"
 [features]
 serde = [ "dep:serde" ]
 
-[patch.crates-io]
-casper-types = { version = "5.0.0", git = "https://github.com/casper-network/casper-node.git", branch = "release-2.0.0-rc6" }

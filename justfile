@@ -21,7 +21,7 @@ test-integration-only:
         --features="test-support"
 
 build-test-wasm:
-    cargo build \
+    RUSTFLAGS="-C target-cpu=mvp" cargo build \
         --release \
         --target wasm32-unknown-unknown \
         -p integration-tests \
